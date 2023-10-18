@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Recetario</title>
+        <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    </head>
+    <body>
+        <h1>Track your macros</h1>
+
+        <div class="foodOptions">
+            <h3>Choose a food</h3>
+            <select id="foodSelect">
+                <option value="">Choose your food</option>
+                <option value="Eggs">Eggs</option>
+                <option value="Oats">Oats</option>
+                <option value="Banana">Banana</option>
+                <option value="Manzana">Manzana</option>
+                <!-- Agrega más alimentos aquí si es necesario. -->
+            </select>
+            <button onclick="addSelectedFood()">Select</button>
+        </div>
+
+        <div class="add-food">
+            <h3>Customize your foods</h3>
+            <p>Make that specific food and input all It's nutrition facts</p>
+            <div class="customFoodForm">
+                <input type="text" id="foodName" placeholder="Nombre del alimento" />
+                <input type="number" id="calories" placeholder="Calorías" />
+                <input type="number" id="carbs" placeholder="Carbohidratos (g)" />
+                <input type="number" id="proteins" placeholder="Proteínas (g)" />
+                <input type="number" id="fats" placeholder="Grasas (g)" />
+                <button onclick="addFood()">Add new</button>
+            </div>
+        </div>
+
+        <div class="food-list">
+            <!-- Alimentos -->
+        </div>
+
+        <div class="total-nutrition">
+            <h3>Total Nutrition Facts</h3>
+            <p>Calorías: <span id="totalCalories">0</span></p>
+            <p>Carbohidratos: <span id="totalCarbs">0</span> g</p>
+            <p>Proteínas: <span id="totalProteins">0</span> g</p>
+            <p>Grasas: <span id="totalFats">0</span> g</p>
+        </div>
+
+        <script src="../javascript/scripts.js"></script>
+    </body>
+</html>
